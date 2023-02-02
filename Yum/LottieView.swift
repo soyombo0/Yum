@@ -8,8 +8,7 @@
 import SwiftUI
 import Lottie
 
-public struct LottieView: NSViewRepresentable{
-    
+struct LottieView: NSViewRepresentable {
     
     public init( loopMode: LottieLoopMode = .loop, autostart: Bool = true, contentMode: LottieContentMode = LottieContentMode.scaleAspectFit) {
         

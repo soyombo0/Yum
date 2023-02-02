@@ -8,6 +8,8 @@
 import SwiftUI
 struct ContentView: View {
     
+    // MARK: - Main View; Entry point of app
+    
     var body: some View {
         
         VStack() {

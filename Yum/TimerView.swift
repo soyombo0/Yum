@@ -9,60 +9,60 @@ import SwiftUI
 import AVFoundation
 
 struct TimerView: View {
-    
+    // MARK: - properties
     @State private var studyTime = 0.0
     @State private var restTime = 0.0
-
-    @State private var activity = ""
+    @State private var activity = "Off"
+    @State private var estimatedStudy = 100.0
+    @State private var estimatedRest = 100.0
     
-    let activityTypes = ["Study", "Rest", "Off"]
+    let activityTypes = ["Study", "Rest"]
     
     let studyTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
+    let animView = LottieView()
+    
+    // MARK: - Timer View
     var body: some View {
         VStack {
-//            HStack {
-//                Toggle("Study", isOn: $isActiveStudy)
-//                    .toggleStyle(.button)
-//                    .onReceive(studyTimer) { _ in
-//                        guard isActiveStudy == false else { return }
-//                        isActiveRest = false
-//                        if studyTime < 60 {
-//                            studyTime += 1
-//                        }
-//                    }
-//
-//                Toggle("Rest", isOn: $isActiveRest)
-//                    .toggleStyle(.button)
-//                    .onReceive(restTimer) { _ in
-//                        guard isActiveRest == false else { return }
-//                        isActiveStudy = true
-//                        if restTime < 60 {
-//                            restTime += 1
-//                        }
-//                    }
-//            }
             
             Picker("", selection: $activity) {
                 ForEach(activityTypes, id: \.self) {
                     Text($0)
                         .onReceive(studyTimer) { _ in
-                            if activity == "Study" {
+                            if activity == "Study" && studyTime < estimatedStudy {
                                 studyTime += 1
                             }
-                            
-                            if activity == "Rest" {
+                            if activity == "Rest" && restTime < estimatedRest {
                                 restTime += 1
                             }
-
                         }
                 }
             }
             .pickerStyle(.segmented)
+            .padding()
             
-            ProgressView("Study", value: studyTime, total: 100)
-
-            ProgressView("Rest", value: restTime, total: 100)
+            HStack {
+                Button {
+                    studyTime = 0
+                    restTime = 0
+                    activity = ""
+                } label: {
+                    Image(systemName: "repeat")
+                }
+                
+                Button {
+                    activity = ""
+                } label: {
+                    Image(systemName: "pause.fill")
+                }
+            }
+            
+            ProgressView("Study", value: studyTime, total: estimatedStudy)
+                    
+            ProgressView("Rest", value: restTime, total: estimatedRest)
+                
+            
         }
         .padding()
     }
