@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        VStack() {
+            LottieView(loopMode: .loop, autostart: true, contentMode: .scaleAspectFit)
+            
+            TimerView()
         }
         .padding()
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

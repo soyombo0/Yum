@@ -11,6 +11,11 @@
 		3B15371A298B0B5400E35D8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B153719298B0B5400E35D8C /* ContentView.swift */; };
 		3B15371C298B0B5500E35D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B15371B298B0B5500E35D8C /* Assets.xcassets */; };
 		3B15371F298B0B5500E35D8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B15371E298B0B5500E35D8C /* Preview Assets.xcassets */; };
+		3B153728298B0EEA00E35D8C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 3B153727298B0EEA00E35D8C /* Lottie */; };
+		3B15372C298B10FD00E35D8C /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15372B298B10FD00E35D8C /* LottieView.swift */; };
+		3B15372E298B11CE00E35D8C /* working.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B15372D298B11CE00E35D8C /* working.json */; };
+		3B153730298B161400E35D8C /* jobing.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B15372F298B161300E35D8C /* jobing.json */; };
+		3B64308B298B1E7500149ED2 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64308A298B1E7500149ED2 /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,10 @@
 		3B15371B298B0B5500E35D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B15371E298B0B5500E35D8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B153720298B0B5500E35D8C /* Yum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Yum.entitlements; sourceTree = "<group>"; };
+		3B15372B298B10FD00E35D8C /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		3B15372D298B11CE00E35D8C /* working.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = working.json; sourceTree = "<group>"; };
+		3B15372F298B161300E35D8C /* jobing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jobing.json; sourceTree = "<group>"; };
+		3B64308A298B1E7500149ED2 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B153728298B0EEA00E35D8C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +64,11 @@
 			children = (
 				3B153717298B0B5400E35D8C /* YumApp.swift */,
 				3B153719298B0B5400E35D8C /* ContentView.swift */,
+				3B64308A298B1E7500149ED2 /* TimerView.swift */,
+				3B15372B298B10FD00E35D8C /* LottieView.swift */,
 				3B15371B298B0B5500E35D8C /* Assets.xcassets */,
+				3B15372F298B161300E35D8C /* jobing.json */,
+				3B15372D298B11CE00E35D8C /* working.json */,
 				3B153720298B0B5500E35D8C /* Yum.entitlements */,
 				3B15371D298B0B5500E35D8C /* Preview Content */,
 			);
@@ -85,6 +99,9 @@
 			dependencies = (
 			);
 			name = Yum;
+			packageProductDependencies = (
+				3B153727298B0EEA00E35D8C /* Lottie */,
+			);
 			productName = Yum;
 			productReference = 3B153714298B0B5400E35D8C /* Yum.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +130,9 @@
 				Base,
 			);
 			mainGroup = 3B15370B298B0B5400E35D8C;
+			packageReferences = (
+				3B153726298B0EEA00E35D8C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 3B153715298B0B5400E35D8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,8 +147,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B153730298B161400E35D8C /* jobing.json in Resources */,
 				3B15371F298B0B5500E35D8C /* Preview Assets.xcassets in Resources */,
 				3B15371C298B0B5500E35D8C /* Assets.xcassets in Resources */,
+				3B15372E298B11CE00E35D8C /* working.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +163,8 @@
 			files = (
 				3B15371A298B0B5400E35D8C /* ContentView.swift in Sources */,
 				3B153718298B0B5400E35D8C /* YumApp.swift in Sources */,
+				3B64308B298B1E7500149ED2 /* TimerView.swift in Sources */,
+				3B15372C298B10FD00E35D8C /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B153726298B0EEA00E35D8C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B153727298B0EEA00E35D8C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B153726298B0EEA00E35D8C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B15370C298B0B5400E35D8C /* Project object */;
 }
