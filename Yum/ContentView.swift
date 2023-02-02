@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 struct ContentView: View {
     
     // MARK: - Main View; Entry point of app
@@ -14,7 +15,6 @@ struct ContentView: View {
         
         VStack() {
             LottieView(loopMode: .loop, autostart: true, contentMode: .scaleAspectFit)
-            
             TimerView()
         }
         .padding()

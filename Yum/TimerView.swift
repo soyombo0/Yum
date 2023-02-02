@@ -6,26 +6,22 @@
 //
 
 import SwiftUI
-import AVFoundation
 
 struct TimerView: View {
     // MARK: - properties
     @State private var studyTime = 0.0
     @State private var restTime = 0.0
     @State private var activity = "Off"
-    @State private var estimatedStudy = 100.0
-    @State private var estimatedRest = 100.0
+    @State private var estimatedStudy = 25.0
+    @State private var estimatedRest = 5.0
     
     let activityTypes = ["Study", "Rest"]
     
     let studyTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    let animView = LottieView()
-    
     // MARK: - Timer View
     var body: some View {
         VStack {
-            
             Picker("", selection: $activity) {
                 ForEach(activityTypes, id: \.self) {
                     Text($0)
@@ -33,6 +29,7 @@ struct TimerView: View {
                             if activity == "Study" && studyTime < estimatedStudy {
                                 studyTime += 1
                             }
+                            
                             if activity == "Rest" && restTime < estimatedRest {
                                 restTime += 1
                             }
@@ -61,7 +58,6 @@ struct TimerView: View {
             ProgressView("Study", value: studyTime, total: estimatedStudy)
                     
             ProgressView("Rest", value: restTime, total: estimatedRest)
-                
             
         }
         .padding()
