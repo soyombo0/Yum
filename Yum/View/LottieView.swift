@@ -11,15 +11,11 @@ import Lottie
 struct LottieView: NSViewRepresentable {
     
     public init( loopMode: LottieLoopMode = .loop, autostart: Bool = true, contentMode: LottieContentMode = LottieContentMode.scaleAspectFit) {
-        
-
         self.loopMode = loopMode
         self.autostart = autostart
         self.contentMode = contentMode
     }
     
-    
-
     let loopMode: LottieLoopMode
     let autostart: Bool
     let contentMode: LottieContentMode
@@ -54,17 +50,17 @@ struct LottieView: NSViewRepresentable {
     }
     
     
-    func pause(){
-        animationView.pause()
-    }
-    
-    func play(){
-        animationView.play()
-    }
-    
-    func stop(){
-        animationView.stop()
-    }
+//    func pause(){
+//        animationView.pause()
+//    }
+//    
+//    func play(){
+//        animationView.play()
+//    }
+//    
+//    func stop(){
+//        animationView.stop()
+//    }
     
     public func updateNSView(_ nsView: NSViewType, context: Context) {
         

@@ -12,8 +12,8 @@ struct TimerView: View {
     @State private var studyTime = 0.0
     @State private var restTime = 0.0
     @State private var activity = "Off"
-    @State private var estimatedStudy = 25.0
-    @State private var estimatedRest = 5.0
+    @State private var estimatedStudy = 25.0 * 360
+    @State private var estimatedRest = 5.0 * 360
     
     let activityTypes = ["Study", "Rest"]
     

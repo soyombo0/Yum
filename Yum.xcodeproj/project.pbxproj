@@ -10,12 +10,11 @@
 		3B153718298B0B5400E35D8C /* YumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B153717298B0B5400E35D8C /* YumApp.swift */; };
 		3B15371A298B0B5400E35D8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B153719298B0B5400E35D8C /* ContentView.swift */; };
 		3B15371C298B0B5500E35D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B15371B298B0B5500E35D8C /* Assets.xcassets */; };
-		3B15371F298B0B5500E35D8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B15371E298B0B5500E35D8C /* Preview Assets.xcassets */; };
 		3B153728298B0EEA00E35D8C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 3B153727298B0EEA00E35D8C /* Lottie */; };
 		3B15372C298B10FD00E35D8C /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15372B298B10FD00E35D8C /* LottieView.swift */; };
 		3B15372E298B11CE00E35D8C /* working.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B15372D298B11CE00E35D8C /* working.json */; };
-		3B153730298B161400E35D8C /* jobing.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B15372F298B161300E35D8C /* jobing.json */; };
 		3B64308B298B1E7500149ED2 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64308A298B1E7500149ED2 /* TimerView.swift */; };
+		3BCDE609298C650D00D81B09 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDE608298C650D00D81B09 /* MenuBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,12 +22,11 @@
 		3B153717298B0B5400E35D8C /* YumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumApp.swift; sourceTree = "<group>"; };
 		3B153719298B0B5400E35D8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3B15371B298B0B5500E35D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3B15371E298B0B5500E35D8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B153720298B0B5500E35D8C /* Yum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Yum.entitlements; sourceTree = "<group>"; };
 		3B15372B298B10FD00E35D8C /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		3B15372D298B11CE00E35D8C /* working.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = working.json; sourceTree = "<group>"; };
-		3B15372F298B161300E35D8C /* jobing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jobing.json; sourceTree = "<group>"; };
 		3B64308A298B1E7500149ED2 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		3BCDE608298C650D00D81B09 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,25 +60,40 @@
 		3B153716298B0B5400E35D8C /* Yum */ = {
 			isa = PBXGroup;
 			children = (
-				3B153717298B0B5400E35D8C /* YumApp.swift */,
-				3B153719298B0B5400E35D8C /* ContentView.swift */,
-				3B64308A298B1E7500149ED2 /* TimerView.swift */,
-				3B15372B298B10FD00E35D8C /* LottieView.swift */,
+				3BCDE60A298C66F700D81B09 /* Model */,
 				3B15371B298B0B5500E35D8C /* Assets.xcassets */,
-				3B15372F298B161300E35D8C /* jobing.json */,
-				3B15372D298B11CE00E35D8C /* working.json */,
 				3B153720298B0B5500E35D8C /* Yum.entitlements */,
-				3B15371D298B0B5500E35D8C /* Preview Content */,
+				3B2766AE298C553200FC4110 /* Support Files */,
+				3B2766AC298C54E400FC4110 /* View */,
 			);
 			path = Yum;
 			sourceTree = "<group>";
 		};
-		3B15371D298B0B5500E35D8C /* Preview Content */ = {
+		3B2766AC298C54E400FC4110 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3B15371E298B0B5500E35D8C /* Preview Assets.xcassets */,
+				3B153719298B0B5400E35D8C /* ContentView.swift */,
+				3B64308A298B1E7500149ED2 /* TimerView.swift */,
+				3B15372B298B10FD00E35D8C /* LottieView.swift */,
+				3BCDE608298C650D00D81B09 /* MenuBarView.swift */,
 			);
-			path = "Preview Content";
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B2766AE298C553200FC4110 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B153717298B0B5400E35D8C /* YumApp.swift */,
+				3B15372D298B11CE00E35D8C /* working.json */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		3BCDE60A298C66F700D81B09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +160,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B153730298B161400E35D8C /* jobing.json in Resources */,
-				3B15371F298B0B5500E35D8C /* Preview Assets.xcassets in Resources */,
 				3B15371C298B0B5500E35D8C /* Assets.xcassets in Resources */,
 				3B15372E298B11CE00E35D8C /* working.json in Resources */,
 			);
@@ -165,6 +176,7 @@
 				3B153718298B0B5400E35D8C /* YumApp.swift in Sources */,
 				3B64308B298B1E7500149ED2 /* TimerView.swift in Sources */,
 				3B15372C298B10FD00E35D8C /* LottieView.swift in Sources */,
+				3BCDE609298C650D00D81B09 /* MenuBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Yum/Yum.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -316,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Yum/Yum.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
